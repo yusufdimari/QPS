@@ -1,0 +1,134 @@
+#testimonial {
+  background: var(--color-ui-secondary);
+  padding: 4rem 2rem;
+  overflow: hidden;
+  color: var(--color-white);
+  text-align: center;
+}
+
+#testimonial .title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+#testimonial .sub__title {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* Slick Carousel */
+#testimonial .testimonial__container {
+  margin-top: 30px;
+}
+
+#testimonial .slick-prev,
+#testimonial .slick-next {
+  display: none;
+}
+
+#testimonial .slick-track {
+  display: flex !important;
+  gap: 20px;
+}
+
+#testimonial .slick-slide {
+  height: inherit !important;
+  padding: 20px;
+  border-radius: var(--radius-3);
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.05);
+}
+
+#testimonial .slick-slide:hover {
+  transform: scale(0.97);
+}
+
+#testimonial .slick-slide > div {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+/* User Info */
+#testimonial .user__row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+}
+
+#testimonial .profile img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+}
+
+#testimonial .name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.2rem;
+}
+
+#testimonial .text__muted {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Review Content */
+#testimonial .content {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 10px 10px;
+  color: var(--color-white);
+  font-style: italic;
+}
+
+/* Stars */
+#testimonial .stars__container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-warning);
+  margin-top: auto;
+  padding: 0 10px 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #testimonial .slick-track {
+    gap: 0;
+  }
+
+  #testimonial .title {
+    font-size: 2rem;
+  }
+
+  #testimonial .sub__title {
+    font-size: 1rem;
+  }
+
+  #testimonial .content {
+    font-size: 0.95rem;
+  }
+
+  #testimonial .name {
+    font-size: 0.95rem;
+  }
+}

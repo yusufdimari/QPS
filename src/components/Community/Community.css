@@ -1,0 +1,197 @@
+/* ===== SECTION BASE STYLES ===== */
+#project.community__section {
+  padding: 4rem 2rem;
+  background: var(--color-bg);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ===== BACKGROUND ILLUSTRATION (OPTIONAL) ===== */
+#project.community__section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent);
+  z-index: 0;
+}
+
+/* ===== SECTION TITLE ===== */
+#project .title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+#project .community__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+/* ===== LEFT & RIGHT SIDES ===== */
+#project .community__left,
+#project .community__right {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+#project .community__left .sub__title,
+#project .community__right .sub__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+#project .community__left p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-white);
+}
+
+/* ===== BENEFITS LIST ===== */
+#project .benefit__list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--color-white);
+  font-family: sans-serif;
+}
+
+#project .benefit__list li::before {
+  content: '✓ ';
+  color: var(--color-accent);
+  font-weight: bold;
+  margin-right: 8px;
+  font-family: sans-serif;
+}
+
+/* ===== CTA BUTTON ===== */
+#project .explore__btn__wrapper {
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+#project .explore__btn {
+  padding: 0.75rem 2.2rem;
+  font-size: 1rem;
+  background: var(--gradient-2);
+  border: none;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+#project .explore__btn:hover {
+  background: var(--gradient-1);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===== SOCIAL LINKS STYLES ===== */
+.community__socials {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.community__socials .social__icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Base button styling */
+.social__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: var(--radius-2);
+  background: var(--color-ui-primary);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(234, 181, 7, 0.1);
+}
+
+.social__btn:hover {
+  transform: scale(1.05);
+  background: var(--color-ui-secondary);
+  color: var(--color-white);
+}
+
+.social__btn svg {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  #project .community__content {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .community__socials .social__icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community__socials .social__icons a {
+    width: 100%;
+    max-width: 280px;
+    background: var(--color-ui-primary);
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-2);
+    font-size: 1rem;
+    box-shadow: 0 0 8px rgba(255,255,255,0.05);
+  }
+}
+
+/* Mobile-specific icon buttons */
+@media (max-width: 500px) {
+  .social__btn span {
+    display: none;
+  }
+
+  .social__btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    background: var(--color-ui-primary);
+  }
+
+  .social__btn svg {
+    color: #FFD700 !important;
+    font-size: 1.4rem;
+  }
+}

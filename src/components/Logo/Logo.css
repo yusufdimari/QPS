@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* slightly more space between image and text */
+}
+
+.logo .icon__container {
+  width: 48px; /* increase logo container size */
+  height: 48px;
+}
+
+.logo .icon__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo .name {
+  font-size: 1.8rem; /* slightly larger brand name */
+  color: var(--color-primary);
+  font-weight: 700;
+}
